@@ -1,0 +1,19 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animations";
+@import "./base/base";
+@import "./layout/reservation-banner";
+@import "./layout/footer";
+@import "./components/button";
+@import "./components/logo";
+
+//homepage
+@import "./pages/homepage-hero";
+@import "./pages/about";
+@import "./pages/highlights";
+@import "./pages/activities";
+
+//booking
+@import "./pages/booking-hero";
+@import "./pages/booking";
+@import "./components/form";

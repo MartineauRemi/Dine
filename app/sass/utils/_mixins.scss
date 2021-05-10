@@ -1,0 +1,40 @@
+/**___________text_________**/
+
+@mixin text-sizing($elt, $size){
+
+}
+
+
+/**___________images_________**/
+
+@mixin set-background-image($name, $path){
+    background-image: url( $path + $name + "-mobile.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @if($name == "salmon" or $name=="beef" or $name=="chocolate"){
+        @media screen and (min-width: 425px){
+            background-image: url($path + $name + "-mobile.jpg");
+        }
+    
+        @media screen and (min-width: 768px){
+            background-image: url($path + $name + "-tablet.jpg");
+        }
+    }@else{
+        @media screen and (min-width: 425px){
+            background-image: url($path + $name + "-mobile" + $large-img-extension + ".jpg");
+        }
+    
+        @media screen and (min-width: 768px){
+            background-image: url($path + $name + "-tablet.jpg");
+        }
+    
+        @media screen and (min-width: 1024px){
+            background-image: url($path + $name + "-tablet" + $large-img-extension + ".jpg");
+        }
+    
+        @media screen and (min-width: 1440px){
+            background-image: url($path + $name + "-desktop.jpg");
+        }
+    }
+}

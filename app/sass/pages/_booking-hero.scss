@@ -1,0 +1,72 @@
+.booking-hero{
+    @include set-background-image("hero-bg", $booking-imgs-path);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3.5rem;
+    text-align: center;
+    color: $white;
+    
+    &__text{
+        padding-bottom: 14.25rem;
+
+        h1{
+            margin-bottom: 1rem;
+        }
+
+        p{
+            margin: auto;
+            margin-bottom: 1.5rem;
+            min-width: 19.375rem;
+            max-width: 19.375rem;
+        }
+    }
+
+    .logo{
+        display: block;
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .booking-hero{
+        .logo{
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+        }
+
+        .btn{
+            display: none;
+        }
+
+        &__text p{
+            min-width: 33.75rem;
+            max-width: 33.75rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .booking-hero{
+        padding-top: 4rem;
+
+        &__text{
+            margin: 0;
+            min-width: 0;
+            max-width: 27.8125rem;
+            width: auto;
+            min-height: 0;
+            height: auto;
+            text-align: left;
+
+            h1{
+                margin-bottom: 1.5rem;
+            }
+        }
+        .logo{
+            position: static;
+            margin-bottom: 9.5rem;
+        }
+    }
+}

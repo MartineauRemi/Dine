@@ -1,0 +1,92 @@
+.homepage-hero{
+    background-color: $cod-gray;
+    &__text{
+        text-align: center;
+        color: $white;
+        padding-top: 0,625rem;
+        padding-bottom: 9.5rem;
+
+        .logo{
+            display: block;
+        }
+
+        h1, .logo{
+            margin-bottom: 2rem;
+        }
+
+        p{
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__img{
+        background-image: url("../images/homepage/hero-bg-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: 50vw; //33vh
+    }
+}
+
+@media screen and (min-width: 768px){
+    .homepage-hero{
+        &__text{
+            padding: 0.625rem 2.5rem 14.0625rem 2.5rem;
+            
+            h1{
+                margin-left: 5rem;
+                margin-right: 5rem;
+            }
+            p{
+                margin-left: 3.75rem;
+                margin-right: 3.75rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+
+}
+
+@media screen and (min-width: 1440px){
+    .homepage-hero{
+        display: flex;
+        justify-content: flex-start;
+        background-image: url("../images/homepage/hero-bg-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom 0 right 0;
+        height: 51.25rem;
+
+        &__text{
+            text-align: left;
+            padding: 4rem 0 12.375rem 0;
+            
+            //a modifier
+            min-width: 32.75rem;
+            width: 32.75rem;
+            min-height: 22.75rem;
+            height: 22.75rem;
+
+
+            h1, p{
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .logo{
+                margin-bottom: 9.5rem;
+            }
+
+            h1{
+                margin-bottom: 1.5rem;
+            }
+
+            p{
+                margin-bottom: 2.5rem;
+                margin-right: 5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap');
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    font-size: 1rem;
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+h1{
+    font-weight: $fw-sm;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+h2{
+    font-weight: $fw-xl;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.025rem;
+}
+
+h3{
+    font-weight: $fw-lg;
+    font-size: 1.125rem;   
+}
+
+p{
+    font-weight: $fw-md;
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0117rem;
+}
+
+input{
+    font-weight: $fw-md;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0137rem;
+}
+
+.wrapper{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 424px){
+    .wrapper{
+        &--booking-form{
+            padding-left: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .wrapper{
+        padding-left: 6.125rem;
+        padding-right: 6.125rem;
+        
+        &--activities{
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &--reservation-banner{
+            padding: 3.5rem;
+        }
+
+        &--footer{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+
+    h1{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    h2{
+        line-height: 3.5rem;
+        font-size: 2.5rem;
+        letter-spacing: -0.03125rem;
+    }
+
+    p{
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    h1{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+
+    .wrapper{
+        padding-left: 10.25rem;
+        padding-right: 10.25rem;
+
+        &--booking-form{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

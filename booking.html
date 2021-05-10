@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./app/css/styles.css"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="./app/images/favicon-32x32.png">
+  
+  <title>Dine | Farmhouse Restaurant - Booking</title>
+</head>
+<body>
+
+  <section class="booking-hero wrapper wrapper--hero">
+    <div class="booking-hero__text">
+      <a href="index.html" class="logo">
+        <img src="./app/images/logo.svg" alt="logo"/>
+      </a>
+      <h1>Reservations</h1>
+    <p>
+      We can’t wait to host you. If you have any special requirements please feel free to 
+      call on the phone number below. We’ll be happy to accommodate you.
+    </p>
+    <a href="#" class="btn btn--ondark btn--active">Reserve Place</a>
+    </div>
+  </section>
+
+  <section class="booking-form wrapper wrapper--booking-form">
+    <form id="booking-form" class="form form--booking">
+      <input
+        id="name"
+        name="name"
+        type="text"
+        class="name-input"
+        placeholder="Name"
+        required
+      />
+      
+      <span
+        id="name-input-error"
+        class="form__error-indication form__error-indication--name">
+      </span>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="email-input"
+        placeholder="Email"
+        required
+      />
+      
+      <span 
+        id="email-input-error" 
+        class="form__error-indication form__error-indication--email">
+      </span>
+
+      <fieldset id="date-container" class="date-container" name="date">
+        <label for="date">
+          <span>Pick a date</span>
+          <span id="date-input-error" class="form__error-indication"></span>
+        </label>
+        <section id="date" class="date">
+          <input
+            class="date-input"
+            id="month"
+            type="text"
+            placeholder="MM"
+            maxlength="2"
+            required
+          />
+
+          <input
+            class="date-input"
+            id="day"
+            type="text"
+            placeholder="DD"
+            maxlength="2"
+            required
+          />
+
+          <input
+            class="date-input"
+            id="year"
+            type="text"
+            placeholder="YYYY"
+            maxlength="4"
+            required
+          />
+        </section>
+      </fieldset>
+
+      <fieldset id="time-container" class="time-container" name="time">
+        <label for="time">
+          <span>Pick a time</span>
+          <span id="time-input-error" class="form__error-indication"></span>
+        </label>
+        <section id="time" class="time">
+          <input id="hours" class="time-input" type="number" placeholder="09" min="7" max="21" maxlength="2" required/>
+          <input id="minutes" class="time-input" type="number" placeholder="00" min="0" max="59" maxlength="2" required/>
+          <p id="selected-time-option" class="selected-time-option"></p>
+          <ul class="time-options">
+            <li id="AM" class="time-options__item">AM</li>
+            <li id="PM" class="time-options__item">PM</li>
+          </ul>
+        </section>
+      </fieldset>
+      <div id="ppl-adjust" class="ppl-adjust">
+        <button class="less-ppl">-</button>
+        <strong id="nb-of-ppl"></strong>
+        <button class="more-ppl">+</button>
+      </div>
+      <span id="nb-of-ppl-input-error" class="form__error-indication form__error-indication--nbOfPeople"></span>
+
+      <input
+        type="submit"
+        class="btn btn--booking btn--onlight btn--active btn--submit"
+        value="Make reservation" />
+    </form>
+  </section>
+
+  <footer class="wrapper wrapper--footer">
+    <a href="index.html" class="logo logo--footer">
+      <img src="./app/images/logo.svg" alt="logo"/>
+    </a>
+    <ul class="grid">
+      <ul class="contact">
+        <li>Marthwaite, Sedbergh</li>
+        <li>Cumbria</li>
+        <li>+00 44 123 4567</li>
+      </ul>
+      
+      <ul class="open-times">
+        <li>Open Times</li>
+        <li>Mon - Fri: 09:00 AM - 10:00 PM</li>
+        <li>Sat - Sun: 09:00 AM - 11:30 PM</li>
+      </ul>
+    </ul>
+  </footer>
+  <script src="./app/js/form.js"></script>
+</body>
+</html>

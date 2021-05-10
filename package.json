@@ -1,0 +1,12 @@
+{
+  "name": "html-sass-js-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./app/sass/styles.scss:./app/css/styles.css"
+  },
+  "author": "MartineauRemi",
+  "license": "ISC"
+}

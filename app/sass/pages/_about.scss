@@ -1,0 +1,98 @@
+.about{
+    text-align: center;
+    position: relative;
+    top: -4.5rem;
+
+    .fadein{
+        opacity: 0;
+    }
+}
+
+.about-card{
+    &:nth-child(1){
+        margin-bottom: 5rem;
+    }
+    .about-card__img{
+        width: 100%;
+        height: 25rem;
+        margin-bottom: 3rem;
+    }
+
+    &__pattern{
+        padding-bottom: 2rem;
+    }
+
+    &__text{
+        background: transparent;
+        h2{
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+#enjoyable-place{
+    @include set-background-image("enjoyable-place", $homepage-imgs-path);
+}
+
+#locally-sourced{
+    @include set-background-image("locally-sourced", $homepage-imgs-path);
+}
+
+@media screen and (min-width: 768px){
+    .about{
+        background-image: url("../images/patterns/pattern-curve-top-left.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 0 left 24rem;
+    }
+    .about-card{
+        &:nth-child(1){
+            margin-bottom: 7.5rem;
+        }
+
+        &:nth-child(2){
+            position: relative;
+            &::after{
+                content: "";
+                background-image: url("../images/patterns/pattern-lines.svg");
+                position: absolute;
+                top: 14.25rem;
+                right: -3.625rem;
+                background-repeat: no-repeat;
+                width: 10rem;
+                height: 4.75rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .about-card{
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        &:nth-child(1){
+            flex-direction: row;
+            .about-card__img{
+                margin-right: 7.75rem;
+            }
+        }
+        &:nth-child(2){
+            flex-direction: row-reverse;
+            &::after{
+                top: 50%;
+                right: -7.25rem;
+            }
+            .about-card__img{
+                margin-left: 7.75rem;
+            }
+        }
+
+        &__img{
+            min-width: 33.75rem;
+            width: 33.75rem;
+            min-height: 45rem;
+            height: 45rem;
+        }
+    }
+}

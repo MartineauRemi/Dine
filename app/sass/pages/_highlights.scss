@@ -1,0 +1,151 @@
+.highlights{
+    text-align: center;
+    background-color: $cod-gray;
+    color: $light-gray;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.hl-description{
+    opacity: 0;
+    margin-bottom: 4rem;
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    &__pattern{
+        margin-bottom: 2rem;
+    }
+}
+
+.hl-cards-container{
+    opacity: 0;
+}
+
+.hl-card{
+    border-bottom: .5px solid $dark-gray;
+    margin-bottom: 1.5rem;
+    &__img{
+        margin-bottom: 1.5rem;
+        width: 100%;
+        min-height: 15.3125rem;
+    }
+
+    &__text{
+        h3{
+            margin-bottom: 0.25rem;
+        }
+
+        p{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+//modify to use the mixins 
+#salmon{
+    background-image: url("../images/homepage/salmon-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#beef{
+    background-image: url("../images/homepage/beef-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#chocolate{
+    background-image: url("../images/homepage/chocolate-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 425px){
+    #salmon{
+        background-image: url("../images/homepage/salmon-mobile@2x.jpg");
+        background-position: center;
+    }
+
+    #beef{
+        background-image: url("../images/homepage/beef-mobile@2x.jpg");
+    }
+
+    #chocolate{
+        background-image: url("../images/homepage/chocolate-mobile@2x.jpg");
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .highlights{
+        padding-bottom: 6rem;
+        padding-top: 6rem;
+    }
+
+    .hl-description{
+        margin-bottom: 3rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .hl-card{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        &__img{
+            height: 6rem;
+            min-height: 6rem;
+            width: 8rem;
+            min-width: 8rem;
+            margin-bottom: 3rem;
+            margin-right: 3.875rem;
+        }
+
+        h3{
+            position: relative;
+            &::after{
+                content: "";
+                height: 1px;
+                width: 2rem;
+                position: absolute;
+                bottom: 0.625rem;
+                left: -3.875rem;
+                background-color: $beaver;
+            }
+        }
+
+        p{
+            font-weight: $fw-md;
+            font-size: 0.9375rem;
+            line-height: 1.75rem;
+            letter-spacing: -0.1875px;
+        }
+
+        &:nth-child(4){
+            border: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .highlights{
+        padding-top:  12.5rem;
+        padding-bottom: 7.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 7.75rem;
+    }
+
+    .hl-description{
+        align-self: start;
+        text-align: left;
+        margin: 0;
+    }
+
+    .hl-cards-container{
+        align-self: end;
+    }
+}

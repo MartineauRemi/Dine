@@ -1,0 +1,48 @@
+.btn{
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    font-weight: $fw-lg;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.125rem;
+    border: 1px solid;
+    text-transform: uppercase;
+
+    &--ondark{
+        color: $white;
+        border-color: $white;
+        
+        &:hover{
+            color: $cod-gray;
+            background-color: $white;
+        }
+    }
+
+    &--onlight{
+        color: $white;
+        border-color: $white;
+        background-color: $cod-gray;
+        
+        &:hover{
+            color: $cod-gray;
+            border-color: $cod-gray;
+            background-color: $white;
+        }
+    }
+
+    &--inactive{
+        color: $shuttle-gray;
+        border-color: $shuttle-gray;
+    }
+
+
+    &--booking{
+        width: 100%;
+        padding: 1.5rem 0rem;
+        text-align: center;
+
+        &:hover{
+            border: 1px solid $cod-gray;
+        }
+    }
+}
